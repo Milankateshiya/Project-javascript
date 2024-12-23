@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>B2C Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to the CSS file -->
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="logo">
+        <h1>B2C Portal</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a href="#">Order Tracking</a></li>
+          <li><a href="#">Customer Service</a></li>
+          <li><a href="#">Admin Panel</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+      <!-- Product Listing Section -->
+      <section id="products">
+        <div class="product-item">
+          <img src="https://via.placeholder.com/300x200" alt="Product 1" />
+          <h3>Product 1</h3>
+          <p>Product 1 Description</p>
+          <span>$19.99</span>
+          <button onclick="addToCart(1, 'Product 1', 19.99)">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/300x200" alt="Product 2" />
+          <h3>Product 2</h3>
+          <p>Product 2 Description</p>
+          <span>$29.99</span>
+          <button onclick="addToCart(2, 'Product 2', 29.99)">
+            Add to Cart
+          </button>
+        </div>
+      </section>
+
+      <!-- Cart Section -->
+      <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p>Items: <span id="cart-count">0</span></p>
+        <p>Total: <span id="cart-total">$0.00</span></p>
+      </section>
+
+      <!-- Order Tracking Section -->
+      <section id="track-order">
+        <h2>Track Your Order</h2>
+        <form id="track-order-form">
+          <input
+            type="text"
+            id="order-id"
+            placeholder="Enter Order ID"
+            required
+          />
+          <button type="submit">Track Order</button>
+        </form>
+        <p id="order-status"></p>
+      </section>
+
+      <!-- Product Detail Section -->
+      <section id="product-details">
+        <!-- This will be dynamically populated -->
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 B2C Portal</p>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Link to JavaScript File -->
+    <script src="script.js"></script>
+  </body>
+</html>
